@@ -19,7 +19,7 @@ const startup = new PlaywrightCrawler({
         })
         const params: Link = request.userData.params
         const video: any = {
-          flag:  player.id,
+          flag: player.id,
           m3u8: player.url,
           thumb: params.thumb,
           title: player.vod_data.vod_name,
@@ -28,7 +28,7 @@ const startup = new PlaywrightCrawler({
         await videoResp.save(video)
         params.locked = 1
         await linkResp.save(params)
-        log.info(`${video.title}) = > OK`)
+        log.info(`${video.title} = > OK`)
       }
     }
   }
