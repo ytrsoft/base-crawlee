@@ -34,7 +34,6 @@ const startup = new PlaywrightCrawler({
   }
 })
 
-
 const links: Link[] = await linkResp.find({
   where: {
     locked: 0
