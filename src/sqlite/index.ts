@@ -1,13 +1,17 @@
 import { log } from 'crawlee'
 import { DataSource } from 'typeorm'
-import { User } from '../entities/User.js'
+import { Menu } from '../entities/Menu.js'
+import { Link } from '../entities/Link.js'
+import { Video } from '../entities/Video.js'
 
 const sqlite: DataSource = new DataSource({
   type: 'sqlite',
   synchronize: true,
   database: 'src/sqlite/storage.sqlite',
   entities: [
-    User
+    Menu,
+    Link,
+    Video
   ]
 })
 
